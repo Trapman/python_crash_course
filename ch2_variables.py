@@ -39,6 +39,28 @@ favorite_city = 'philadelphia'
 favorite_city.rstrip()  # removes all whitespace on the right end of the string. NOTE this removes it temporarily
 favorite_city = favorite_city.rstrip()  # removes it permanently by renaming the variable with rstrip()
 
+####################################### EXERCISES ######################
+message3 = "What's good, bul - this MY summer tbh"
+print(message3)
+
+full_name3 = "uncle noke"
+print(full_name3.lower())
+print(full_name3.upper())
+print(full_name3.title())
+
+author = "nietzsche"
+quote = "I want demons around me"
+print(f"{author} {quote}")
+
+famous_author = "nietzsche"
+quote = "I want demons around me"
+message = (f"{famous_author} {quote}")
+print(message)
+
+whitespace_name = "   billy C   "
+print(whitespace_name.lstrip())
+
+
    
 
 

@@ -60,7 +60,6 @@ print(message)
 whitespace_name = "   billy C   "
 print(whitespace_name.lstrip())
 
-
-   
+##########
 
 

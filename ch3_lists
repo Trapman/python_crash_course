@@ -1,0 +1,89 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Jul 11 15:46:18 2020
+
+@author: das68451
+"""
+
+# LISTS ################
+# basic syntax: list = []
+
+# accessing elements in a list: indexing
+teams = ['eagles', 'sixers', 'flyers', 'phillies']
+print(teams[0])       # to access the first element in the list
+print(teams[-1])      # to access the last element in the list
+print(teams[0].title())   #to apply the title() method to first element in list
+
+# using individual values from a list: f-string
+teams = ['eagles', 'sixers', 'flyers', 'phillies']
+message = f"The best Philadelphia team in 2020 is the {teams[2].title()}"
+print(message)
+
+# modifying elements in a list: 
+teams = ['eagles', 'sixers', 'flyers', 'phillies']
+teams[0] = 'soul'
+print(teams)
+
+# adding elements:   append()
+teams.append('eagles')
+
+crypto = []       # fill an empty list with append()
+crypto.append('btc')
+crypto.append('eth')
+crypto.append('link')
+crypto.append('xtz')
+
+# inserting elements: insert()
+crypto.insert(2, 'xrp')
+
+# removing an item: del()    useful if you know the position of the item you want to remove
+del crypto[2]
+
+# removing an item: pop()    removes last item, and allows you to use the item after you remove it
+shoes = ['kobe', 'kyrie', 'lebron', 'giannis']
+print(shoes)
+
+popped_shoes = shoes.pop()     # removes the last item from the list
+print(popped_shoes)
+
+shoes = ['kobe', 'kyrie', 'lebron', 'giannis']
+worst_shoes = shoes.pop()
+print(f"The worst pair of shoes I own are the {worst_shoes.title()}")
+
+# popping items from any position in a list
+shoes = ['kobe', 'kyrie', 'lebron', 'giannis']
+first_owned = shoes.pop(0)
+print(f"The first pair of shoes I owned were the {first_owned.title()}")
+
+# removing an item by value:  remove()   useful if you don't know the position of the item
+shoes = ['kobe', 'kyrie', 'lebron', 'giannis']
+shoes.remove('kyrie')
+print(shoes)
+
+shoes = ['kobe', 'kyrie', 'lebron', 'giannis']
+worst_grip = 'kyrie'
+shoes.remove(worst_grip)
+print(shoes)
+print(f"A {worst_grip.title()} were not good to hoop in")
+
+# organizing a list: sort()   defaults to alphabetical order, permanent
+areas = ['rittenhouse', 'nolibs', 'ucity', 'fishtown', 'grad hospital']
+print(areas)
+
+areas.sort()
+print(areas)
+
+# sorted() organizes a list temporarily 
+areas = ['rittenhouse', 'nolibs', 'ucity', 'fishtown', 'grad hospital']
+print('Here is the original list of areas: ')
+print(areas)
+
+print('\nHere is the sorted list: ')
+print(sorted(areas))
+
+print('\nHere is the original list again: ')
+print(areas)
+
+# to print a list in reverse order: reverse()
+
+# to find the length of a list: len()

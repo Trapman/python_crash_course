@@ -1,0 +1,14 @@
+# looping through a list: for loop
+players = ['simmons', 'embiid', 'harris', 'horford']
+for player in players:
+    print(player)
+    # note that you can use ANY name for the temp variable, but use something meaningful
+    
+# adding a method
+for player in players:
+    print(player.title())
+    
+# using f-string
+for player in players:
+    print(f"{player.title()}, is on the Sixers roster.")
+    print(f"I can't wait to see what {player.title()} does this summer!\n")

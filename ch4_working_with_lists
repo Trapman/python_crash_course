@@ -12,3 +12,80 @@ for player in players:
 for player in players:
     print(f"{player.title()}, is on the Sixers roster.")
     print(f"I can't wait to see what {player.title()} does this summer!\n")
+# making numerical lists ###########################################
+    
+# range()   
+for value in range(1,10):      #up to, but not including 10
+    print(value)
+    
+# using range() to make a list of numbers
+numbers = list(range(1,11))
+print(numbers)
+
+# even numbers
+even_numbers = list(range(2, 11, 2))   # adding the step 2 at the end
+print(even_numbers)
+
+# squares
+square_numbers = []
+for value in range(1, 11):
+    square = value**2
+    square_numbers.append(square)
+
+print(square_numbers)
+
+# OR
+
+square_numbers2 = []
+for value in range(1,11):
+    square_numbers2.append(value**2)
+
+print(square_numbers2)
+
+# simple stats with a list of numebrs: min(), max(), sum()
+digits = [1,2,3,4,5,6,7,8,9,0]
+min(digits)
+max(digits)
+sum(digits)
+
+# list comprehension: combines for loop and creatoin of new elements into one line and automatically appends each new element
+square_numbers3 = [value**2 for value in range(1,11)]
+print(square_numbers3) #see page 60 for good definition 
+
+# working with part of a list ###########################################
+# slicing a list
+players = ['embiid', 'simmons', 'harris', 'milton', 'horford', 'richardson']
+print(players[0:3]) # starters
+print(players[3:6]) # bench
+
+# looping through a slice
+players = ['embiid', 'simmons', 'harris', 'milton', 'horford', 'richardson']
+
+print("Here are the first three starters on the Sixers: ")
+for player in players[:3]:
+    print(player.title())
+    
+# copying a list:  use ([:])
+sixer_players = ['embiid', 'simmons', 'harris']
+nba_players = sixer_players[:]
+
+print(sixer_players)
+print(nba_players)
+
+nba_players.append('lebron')
+print(nba_players)
+print(sixers_players)
+
+# tuples ######################################
+# immutable list of items
+# same as a list in composition but use () instead of []
+dimensions_bedroom = (20, 12)
+print(dimensions_bedroom[0])
+print(dimensions_bedroom[1])
+
+dimensions_bedroom = (20, 12)
+for dimension in dimensions_bedroom:
+    print(dimension)
+
+# you can't modify a tuple, you have to write over them
+dimensions_bedroom = (27, 15)

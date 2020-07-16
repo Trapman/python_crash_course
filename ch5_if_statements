@@ -1,0 +1,7 @@
+# basic if statments
+players = ['embiid', 'simmons', 'harris', 'richardson']
+for player in players:
+  if player = 'embiid':
+    print(player.upper())
+  else:
+    print(player.title()

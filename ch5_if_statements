@@ -1,9 +1,130 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jul 15 23:54:27 2020
+
+@author: das68451
+"""
+
 # basic if statments
 players = ['embiid', 'simmons', 'harris', 'richardson']
 for player in players:
-  if player = 'embiid':
+  if player == 'embiid':
     print(player.upper())
   else:
     print(player.title()
-############
-#upload finished chapter
+    
+# conditional tests: every if statement has a conditional test that can be evaluated as True/False
+# checking for equality
+player = 'embiid'
+player == 'embiid'   #true
+player == 'simmons'  #false
+
+# ignoreing case when checking for equality
+player = 'Foles'
+player == 'foles'  #false
+player.lower() == 'foles' #true
+
+# checking for inequality
+ebay_item = 'bahamut lagoon'
+
+if ebay_item != 'live a live'
+    print('Do not bid on this item!')
+    
+# checking multiple conditions
+age_0 = 22
+age_1 = 18
+
+age_0 >=21 and age_1 >= 21  #False
+age_0 >=21 or age_1 >= 21   #True
+
+# checking whether a value is in a list:
+snes_game_queue = ['seiken densetsu 3', 'bahamut lagoon', 'treasure of the rudras']
+'bahamut lagoon' in snes_game_queue #True
+'terranigma' in snes_game_queue #False
+
+# checking whether a value is NOT in a list:
+banned_users = ['yarko', 'belov', 'vas']
+user = 'hoang'
+
+if user not in banned_users:
+    print(f"{user.title()}, you are allowed to post a response.")
+    
+# boolean expression
+    #just another name for a conditional test
+game_active = True
+can_edit = False
+
+# if statements
+age = 24
+if age > 18:
+    print('You are old enough to vote.')
+    print('Have you registered to vote?')
+    
+# if-else statements
+age = 24
+if age > 18:
+    print('You are old enough to vote.')
+    print('Have you registered to vote?')
+else:
+    print('Sorry, you have to be at least 18 years old to vote!')
+    
+# if-elif-else statements:
+age = 20
+
+if age < 10:
+    price = 0
+elif age < 18:
+    price = 10
+elif age < 21:
+    price = 15
+else:
+    price = 50
+    print("Sorry, you have to pay full price of admission")
+
+print(f"Your admission cost is ${price}.")
+
+# testing multiple conditions:
+game_collection = ['live a live', 'bahamut lagoon', 'treasure of the rudras']
+
+if 'live a live' in game_collection:
+    print(f"Adding {game_collection[0].title()}")
+if 'bahamut lagoon' in game_collection:
+    print(f"Adding {game_collection[1].title()}")
+if 'seiken densetsu 3' in game_collection:
+    print("Adding seiken densetsu")
+    
+print("\nOkay we have finished updating your game collection!")
+
+# Using if statements with Lists
+game_collection = ['live a live', 'bahamut lagoon', 'treasure of the rudras']
+
+for game in game_collection: 
+    print(f"Adding {game.title()} to your collection.")
+
+else:
+    print("Are you sure you don't want to add any games to your collection?")
+
+#check if the list is empty:
+game_collection2 = []
+
+for game in game_collection2: 
+    print(f"Adding {game.title()} to your collection.")
+
+else:
+    print("Are you sure you don't want to add any games to your collection?")
+    
+# using multiple lists:
+available_games = ['mystic ark', 'treasure hunter g', 'brain lord' 
+                   'terranigma', 'front mission', 'bahamut lagoon']
+requested_games = ['treasure hunter g', 'seiken densetsu 3', 'bahamut lagoon',
+                   'terranigma', 'goemon 2']
+
+for game in requested_games:
+    if game in available_games:
+        print(f"Adding {game.title()}.")
+    else:
+        print(f"Sorry, we don't have {game.title()}.")
+        
+print("\nWe finished adding the available games to your collection!")
+
+    

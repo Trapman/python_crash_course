@@ -51,6 +51,33 @@ favorite_languages = {
         'mega': 'python',
         'little anthony' : 'c',
         'hoang': 'sql'}
+                  
 language = favorite_languages['hoang'].title()
 print(f"Hoang's favorite langauge is {language}")
-favorite_language['mega]
+favorite_language['mega']
+
+# using get() to access values
+average_score = embiid_stats2.get('points', 'No point value assigned')  # you don't need to write this message, it will return None by default
+print(average_score)
+# the takeaway here is that get() will return the value assigned to the key if it exists, otherwise will let you know that it doesn't
+
+# looping through a dictionary; there are several options
+# looping through all key-value pairs with items()
+user_data = {
+        'username': 'mega',
+        'firstname':'david',
+        'lastname': 'trapman'
+        }
+
+for key, value in user_data.items():
+    print(f"Key: {key}")
+    print(f"Value: {value}")
+    
+#OR
+    
+for k, v in user_data.items():
+    print(f"Key: {key}")
+    print(f"Value: {value}")
+    
+for name, language in favorite_languages.items():
+    print(f"{name.title()}'s favorite language is {language.title()}.")

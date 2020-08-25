@@ -81,3 +81,15 @@ for k, v in user_data.items():
     
 for name, language in favorite_languages.items():
     print(f"{name.title()}'s favorite language is {language.title()}.")
+                  
+# looping through all the keys in a dict, using keys()
+for name in favorite_languages.keys():
+    print(name.title())
+                  
+friends = ['hoang', 'heather']
+for name in favorite_languages.keys()
+    print(f"Hi {name.title()}.")
+                  
+    if name in friends:
+        language = favorite_languages[name].title*(
+        print(f"{name.title()}, I see you love {language}!")

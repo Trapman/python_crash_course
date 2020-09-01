@@ -27,3 +27,17 @@ if height >= 48:
     print("n\You're tall enough to ride!")
 else:
     print("\nSorry you are not tall enough for this ride.")
+
+#######
+# modulo operator
+# divides one number by another number and returns the remainder
+# especially helpful for determining evens/odds
+5 % 3 # returns 2
+
+number = input("Enter a number and I will tell you if it's even or odd: ")
+number = int(number)
+
+if number % 2 == 0:
+    print(f"\nThe number {number} is even.")
+else:
+    print(f"\nThe number {number} is odd.")

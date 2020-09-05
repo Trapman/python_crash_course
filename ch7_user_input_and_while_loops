@@ -72,5 +72,39 @@ while active:
         active = False
     else:
         print(message)
-   ###     
 
+# using break
+prompt = "\nPlease enter the name of the city you have last visited:"
+prompt += "\n(Enter 'quit' when you are finished.) "
+
+while True:
+    city = input(prompt)
+    
+    if city == 'quit':
+        break
+    
+    else:
+        print(f"I'd love to go to {city.title()}!")
+        
+# using continue (basically use it to ignore something instead of using break)
+current_number = 0
+while current_number < 10 :
+    current_number += 1
+    if current_number % 2 == 0:
+        continue  # so if the number is even, it gets skipped
+    
+    print(current_number)
+    
+# pizza
+pizza_order = "\nPlease enter the toppings you'd like on your pizza"
+pizza_order += "\nWhen you're done entering your toppings, enter 'quit'. "
+
+while True:
+    order = input(pizza_order)
+    
+    if order == 'quit':
+        break
+    
+    else:
+        print(f"Great choices! I definitely recommend {order} on my pizza too.")
+        

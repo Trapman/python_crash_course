@@ -84,4 +84,43 @@ def build_person(first_name, last_name, age=None):
 streamer = build_person('doctor', 'disrespect', age=38)
 print(streamer)
 
-###########
+# using a function with a while loop
+def get_formatted_name(first_name, last_name):
+    """Return a full name, neatly formatted."""
+    full_name = f"{first_name} {last_name}"
+    return full_name.title()
+
+while True:
+    print("\nPlease tell me your name:")
+    print("(enter 'q' at any time to quit)")
+    
+    f_name = input("First name: ")
+    if f_name == 'q':
+        break
+    
+    l_name = input("Last name: ")
+    if l_name == 'q':
+        break
+    
+    formatted_name = get_formatted_name(f_name, l_name)
+    print(f"\nHello, {formatted_name}!")
+    
+# city names
+def city_country(city, country):
+    """Returns the name of a city and its country"""
+    city_country_pair = f"{city} {country}"
+    return city_country_pair.title()
+
+while True:
+    print("\nPlease type the name of the city and the country of interest:")
+    print("\nenter 'q' at any time to quit)")
+    
+    city_name = input("City name: ")
+    if city_name == 'q':
+        break
+    
+    country_name = input("Country name: ")
+    if country_name = 'q':
+        break
+    
+    city_country= city_countr

@@ -106,7 +106,7 @@ while True:
     print(f"\nHello, {formatted_name}!")
     
 # city names
-def city_country(city, country):
+def get_city_country(city, country):
     """Returns the name of a city and its country"""
     city_country_pair = f"{city} {country}"
     return city_country_pair.title()
@@ -120,7 +120,8 @@ while True:
         break
     
     country_name = input("Country name: ")
-    if country_name = 'q':
+    if country_name == 'q':
         break
     
-    city_country= city_countr
+    city_country= get_city_country(city_name, country_name)
+    print(f"\nThe city-country pair is {city_country}")

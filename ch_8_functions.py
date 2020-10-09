@@ -108,7 +108,7 @@ while True:
 # city names
 def get_city_country(city, country):
     """Returns the name of a city and its country"""
-    city_country_pair = f"{city} {country}"
+    city_country_pair = f"{city}, {country}"
     return city_country_pair.title()
 
 while True:
@@ -125,3 +125,49 @@ while True:
     
     city_country= get_city_country(city_name, country_name)
     print(f"\nThe city-country pair is {city_country}")
+    
+# make album
+def make_album(artist_name, album_name, tracks = None):
+    """builds a dict describing a music album with artist name and album name, optional track number"""
+    album = {'artist': artist_name.title(), 'album': album_name.title()}
+    if tracks:
+        album['tracks'] = tracks
+    return album
+    
+album1 = make_album("tool", "lateralus", 14)
+print(album1)
+
+def make_album2(artist_name, album_name, tracks = None):
+    """builds a dict describing a music album with artist name and album name, optional track number
+    uses a while loop and user input"""
+    album = 
+    
+    
+# passing a list into a function #########################################
+def greet_users(names):
+    """print a simple greeting to each user in the list."""
+    for name in names:
+        message = f"Hello, {name.title()}!"
+        print(message)
+        
+usernames = ['trap', 'mega', 'hoang', 'vince']
+greet_users(usernames)
+
+# modifying a list in a function ############################################
+#start with some designs that need to be 3D-printed
+unprinted_designs = ['phone case', 'robot pendant', 'dodecahedron']
+completed_models = []
+
+# simulate each design until none are left
+# move each design to completed_models after printing
+while unprinted_designs:
+    current_design = unprinted_designs.pop()
+    print(f"Printing model: {current_design}")
+    completed_models.append(current_design)
+    
+# display all completed models
+print("\nThe following models have been printed: ")
+for completed_model in completed_models:
+    print(completed_model)
+
+    

@@ -170,4 +170,29 @@ print("\nThe following models have been printed: ")
 for completed_model in completed_models:
     print(completed_model)
 
-    
+# function version
+def print_models(unprinted_designs, completed_models):
+    """
+    simulate printing each design, until none are left.
+    move each design to completed_models after printing.
+    """
+    while unprinted_designs:
+        current_design = unprinted_designs.pop()
+        print(f"Printing model: {current_design}")
+        completed_models.append(current_design)
+        
+def show_completed_models(completed_models):
+    """show all the models that were printed"""
+    print("\nThe following models have been printed:")
+    for completed_model in completed_models:
+        print(completed_model)
+        
+unprinted_designs = ['phone case', 'travis scott jordans', 'earthbound original']
+completed_models = []
+
+print_models(unprinted_designs, completed_models)  #print_models(unprinted_designs[:], completed_models) if you want a copy
+show_completed_models(completed_models)
+
+#note that if you want to prevent a function from modifying a list, use the slice notation [:]
+"""function_name(list_name[:])""" # this is the syntax
+# the slice notation makes a copy of the list to send to the function, so it doesn't modify it

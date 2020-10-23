@@ -196,5 +196,15 @@ show_completed_models(completed_models)
 #note that if you want to prevent a function from modifying a list, use the slice notation [:]
 """function_name(list_name[:])""" # this is the syntax
 # the slice notation makes a copy of the list to send to the function, so it doesn't modify it
+##########################
 
-####
+# passing an arbitrary number of arguments: useful when you don't know ahead of time how many arguments a function needs to accept
+def make_pizza(*toppings):
+    """print the list of toppings that have been requested."""
+    print(toppings)
+    
+    make_pizza('pepperoni')
+    make_pizza('onions', 'mushrooms', 'olives')
+    
+    # the * tells python to make an empty tuple called toppings and then pack whatever values it receives into this tuple
+    

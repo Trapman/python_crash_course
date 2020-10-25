@@ -200,11 +200,20 @@ show_completed_models(completed_models)
 
 # passing an arbitrary number of arguments: useful when you don't know ahead of time how many arguments a function needs to accept
 def make_pizza(*toppings):
-    """print the list of toppings that have been requested."""
-    print(toppings)
+    # the * tells python to make an empty tuple called toppings and then pack whatever values it receives into this tuple
+    """Summarize the pizza we are about to make."""
+    print("n\Making a pizza with the following toppings:")
+    for topping in toppings:
+        print(f" - {topping}")
     
     make_pizza('pepperoni')
     make_pizza('onions', 'mushrooms', 'olives')
     
-    # the * tells python to make an empty tuple called toppings and then pack whatever values it receives into this tuple
-    
+# mixed positional and arbitrary arguments
+# this is if you want to accept several different kinds of arguments
+def make_pizza2(size, *toppings):
+    print(f"\nMaking a {size}-inch pizza with the following toppings:")
+    for topping in toppings:
+        print(f" -{topping}")
+        
+    make_pizza2(16, 'pizza')

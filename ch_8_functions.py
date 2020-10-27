@@ -201,7 +201,7 @@ show_completed_models(completed_models)
 # passing an arbitrary number of arguments: useful when you don't know ahead of time how many arguments a function needs to accept
 def make_pizza(*toppings):
     # the * tells python to make an empty tuple called toppings and then pack whatever values it receives into this tuple
-    """Summarize the pizza we are about to make."""
+    """Summarize the pizza we are about to make, adding as many toppings as we'd like"""
     print("n\Making a pizza with the following toppings:")
     for topping in toppings:
         print(f" - {topping}")
@@ -217,4 +217,38 @@ def make_pizza2(size, *toppings):
         print(f" -{topping}")
         
     make_pizza2(16, 'pizza')
-##
+    
+# using arbitrary keyword arguments
+# the following always takes a first and last name, but it accepts an arbitrary number of keyword arguments too
+def build_profile(first, last, **user_info):
+    user_info['first_name'] = first
+    user_info['last_name'] = last
+    return user_info
+
+user_profile = build_profile('david', 'mega',
+                             location = 'fishtown',
+                             field = 'data science')
+
+print(user_profile)
+# basically the ** builds out an empty dictionary called 'user_info'
+# it will then fill this dict with the first + last name, and anything else you add
+# all you need is the first + last name, which we add to the dict since we'll always need them
+
+################################################exercises
+def sandwich_builder(*ingredients):
+    """makes a sandwich with as many ingredients as you want"""
+    print("\nCreating a sandwich with the following ingredients:")
+    for ingredient in ingredients:
+        print(f" -{ingredient}")
+        
+def car_builder(manufacturer, model, **car_info):
+    "builds a car with the manufacturer and model info, as well as anything else you want to add"""
+    car_info['manufacturer_name'] = manufacturer
+    car_info['model_name'] = model
+    return car_info
+
+megas_car_collection = car_builder('buick', 'roadmaster',
+                      year ='1996',
+                      color = 'burgundy',
+                      engine = 'V8')
+print(megas_car_collection)

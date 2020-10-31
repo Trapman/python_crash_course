@@ -253,4 +253,44 @@ megas_car_collection = car_builder('buick', 'roadmaster',
                       engine = 'V8')
 print(megas_car_collection)
 ###############################
-Finish this remaining section %#
+############################
+#storing your functions in modules
+"""this allows you to hide the details of your program's code and also to 
+reuse a function in many different programs. There are several ways to do this."""
+#importing an entire mondule : module_name.function_name()
+"""a module is a file ending in .py"""
+def make_pizza(size, *toppings):
+    """summarize the pizza we are about to make"""
+    print(f"\Making a {size}-inch pizza with the following toppings:")
+    for topping in toppings:
+        print(f"-{topping}")
+        
+ """we'll name this pizza.py and make a separate file called making_pizzas.py in the same directory"""
+ 
+ import pizza # to load this module, makes every function in the module available
+ 
+ pizza.make_pizza(16, 'mushrooms', 'pepperoni')
+ pizza.make_pizza(12, 'extra cheese')
+ 
+# importing specific functions: from module_name import function_name
+from pizza import make_pizza
+
+make_pizza(16, 'mushrooms', 'pepperoni')
+make_pizza(12, 'extra cheese')
+
+# using as to Give a function an alias: from module_name import function_name as fn
+from pizza import make_pizza as mp
+
+mp(16, 'mushrooms', 'pepperoni')
+mp(12, 'extra cheese')
+
+# using as to give a module an alias: import module_name as mn 
+import pizza as p
+
+p.make_pizza(16, 'mushrooms', 'pepperoni')
+p.make_pizza(12, 'extra cheese')
+
+#importing all functions in a module: from module_name import *
+from pizza import *
+make_pizza(16, 'mushrooms', 'pepperoni')
+make_pizza(12, 'extra cheese')

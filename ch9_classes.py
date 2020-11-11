@@ -40,5 +40,19 @@ print(f"Savuol's dog's name is {savuol_dog.name}")
 
 print(f"n\My dog is {my_dog.age} years old.")
 your_dog.sit
-####
 ##############
+class Restaurant:
+    """This builds a restaurant"""
+    
+    def __init__(self, restaurant_name, cuisine_type):
+        """initializes name and type attributes"""
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+        
+    def describe_restaurant(self):
+        """describes the name and type of a restaurant"""
+        print(f"The restaurant's name is {self.restaurant_name} and it offers {self.cuisine_type} cuisine.")
+        
+    def open_restaurant(self):
+        "tells whether the restaurant is open"
+        print(f"{self.restaurant_name} is open.")

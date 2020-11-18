@@ -56,3 +56,36 @@ class Restaurant:
     def open_restaurant(self):
         "tells whether the restaurant is open"
         print(f"{self.restaurant_name} is open.")
+        
+# Working with classes and instances
+"""once you create a class, you'll spend most of your time working with instances 
+from that class. One of the first tasks you'll want to do is modify the attributes
+associated with those instances. You can modify them directly or use methods to upate them."""
+
+#The Car Class
+"""class represents a car, stores info about what kind of car, and has a method
+that will summarize this info"""
+class Car:
+    """A simple attempt to represent a car."""
+    
+    def __init__(self, make, model, year):
+        """initializes attributes to describe a car."""
+        self.make = make
+        self.model = model
+        self.year = year
+        
+    def get_descriptive_name(self):
+        """Return a neatly formatted descriptive name."""
+        long_name = f"{self.year} {self.make} {self.model}"
+        return long_name.title()
+    
+my_new_car = Car('tesla', 's100', 2022)
+print(my_new_car.get_descriptive_name())
+
+#Setting a default value for an attribute
+"""we'll add an odometer_reading value and set it to 0"""
+self.odemeter_reading = 0
+
+def read_odometer(self):
+    """Print a statement to show the car's mileage."""
+    print(f"This car has {self.odometer_reading} miles on it.")

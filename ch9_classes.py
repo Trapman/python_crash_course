@@ -1,4 +1,4 @@
-# creating and using a class#####
+# creating and using a class#
 class Dog:
     """This attempts to model a dog"""
     

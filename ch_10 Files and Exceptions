@@ -1,0 +1,23 @@
+Reading a File: file_reader.py
+with open('sample_text.txt') as file_object:
+    contents = file.object.read()
+print(contents)
+
+# the output by default has a blank line at the end. 
+
+#Run this without the blank line at the end: add rstrip()
+with open('sample_text.txt') as file_object:
+    contents = file.object.read()
+print(contents.rstrip())
+
+# note that the file path here where be where ever your current directory is
+
+#Run this to specify a path
+file_path = '/home/dtrapman/other_files/text_files/file_name.txt'
+with open(file_path) as file_object:
+    
+#Reading line by line: use a for loop
+file_name = 'trap_intel'
+with open(file_name) as file_object:
+    for line in file_object:
+        print(line)   #or print(line.rstrip()) to remove the white space at the end

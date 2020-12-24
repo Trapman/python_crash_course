@@ -21,3 +21,38 @@ file_name = 'trap_intel'
 with open(file_name) as file_object:
     for line in file_object:
         print(line)   #or print(line.rstrip()) to remove the white space at the end
+
+#Making a List of Lines from a File:
+'''
+in short, when you use WITH, the file object returned by OPEN() is only available
+inside the WITH block that contains it. So to retain access to the contents outside
+of the WITH you can store them in a list inside the block, and then work with
+that list outside of the list
+'''
+file_name = 'trap_intel'
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+    
+    for line in lines:
+        print(line.rstrip())
+        
+#Working with a File's Contents
+'''
+once you read a file into memory, you can do whatever you want to it.
+here's a quick example of building a single string containing all the digits
+in the file with no whitespace in it'
+'''
+filename = 'pi_digits.txt'
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_string += line.strip()
+    
+print(pi_string)
+print(len(pi_string))
+
+#Large Files: One Million Digits

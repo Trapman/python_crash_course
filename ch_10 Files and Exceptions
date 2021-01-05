@@ -92,6 +92,11 @@ with open(filename, 'w') as file_object:
     file_object.write('I plan to use it to build video games.\n')
     
 # Appending to a file: 
+'''
+this is for adding content to a file instead of writing over existing content.
+basically you will open the file in APPEND MODE and any lines you write will bne added at the
+end of the file. 
+'''
 filename  = 'programming.txt'
 
 with open(filename, 'a') as file_object:
@@ -104,3 +109,89 @@ guest_name = input("Please enter your first and last name so we can add to the g
 
 with open(filename, "a") as file_object:
     file_object.write(guest_name)
+    
+#############################
+
+#Exceptions
+
+# Try-Except: ZeroDivisionError
+'''
+basically we will use this when we have an idea of a specific error that 
+might occur. And then we tell Python what to do when it happens
+'''
+try:
+    print(5/0)
+except ZeroDivisionError:
+    print("You can't divide by zero!")
+    
+# Exceptions to prevent crashes: Else Block
+'''
+handling errors is especially important when the program has more work to do
+after the error occurs. this allows the program to continue without crashing
+'''
+print("Give me two numbers, and I will divide them.")
+print("enter 'q' to quit.")
+
+while True:
+    first_number = input("\nFirst number: ")
+    if first_number == 'q':
+        break
+    second_number = input("Second number: ")
+    if second_number == 'q':
+        break
+    try:
+        answer = int(first_number) / int(second_number)
+    except ZeroDivisionError:
+        print("You can't divide by zero!")
+    else:
+        print(answer)
+
+#FileNotFoundError
+'''
+handling a missing file is quite common
+'''
+filename = "trap_intel3.txt"
+
+try:
+    with open(filename, encoding = 'utf-8') as f:
+        contents = f.read()
+except FileNotFoundError:
+    print(f"Sorry, the file {filename} does not exist.")
+
+#Analyzing text:
+'''
+let's analyze text files containing entire books. http://gutenberg.org has a
+bunch of classics we can use
+'''
+filename = 'CountOfMonteCristo.txt'
+
+try:
+    with open(filename, encoding = 'utf-8') as f:
+        contents = f.read()
+    except FileNotFoundError:
+        print(f"Sorry, the file {filename} does not exist.")
+    else:
+        # count the number of words in the file
+        words = contents.split()
+        num_words = len(words)
+        print(f"The file {filename} has about {num_words} words.")
+        
+# Working with multiple files
+'''
+same as above, but we'll make it into a function and work with more 
+text file books
+'''
+def count_words(filename):
+    """Count the approximate number of words in a file."""
+    try: 
+        with open(filename) as f:
+            contents = f.read()
+        except FileNotFoundError:
+            print(f"Sorry, the file {filename} does not exist.")
+        else: 
+            words = contents.split()
+            num_words = len(words)
+            print(f"The file {filename} has about {num_words} words.")
+        
+filename = 'countofmontecristo.txt'
+count_words(filename)

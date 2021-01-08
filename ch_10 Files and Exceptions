@@ -199,3 +199,74 @@ count_words(filename)
 filenames = ['countofmontecristo.txt', 'screwtapeletters.txt', 'thusspokezarathustra.txt']
 for filename in filenames:
     count_words(filename)
+
+####################
+#Storing Data
+'''
+Often times you will ask users for input and you will need to store the data,
+usually as a list or dict
+'''
+
+#JSON
+
+#json.dump() stores data
+#json.load() loads the stored data
+
+# this short program stores a set of numbers
+import json
+
+numbers = [2,3,4,6,7,11,13]
+
+filename = 'numbers.json'
+with open(filename, 'w') as f:
+    json.dump(numbers, f)
+    
+# this short program reads these numbers back into memory
+import json
+
+filename = 'numbers.json'
+with open(filename) as f:
+    numbers = json.load(f)
+
+print(numbers)
+#############
+# saving and reading user-generated data 
+'''
+the first part will prompt the user to enter their name and then we store as a file.
+the next part will greet a user whose name has already been stored.
+'''
+username = input("What is your name? ")
+
+filename = 'username.json'
+with open(filename, 'w') as f:
+    json.dump(username, f)
+    print(f"We'll remember you when you come back, {username}!")
+    
+####
+import json
+
+filename = 'username.json'
+
+with open(filename) as f:
+    username = json.load(f)
+    print(f"Welcome back, {username}!")
+    
+########
+# let's combine these two files into one
+
+import json
+
+# load the username, if it hase been store previously.
+# otherwise, prompt for the username and store it.
+
+filename = 'username.json'
+try:
+    with open(filename) as f:
+        username = json.load(f)
+except FileNotFoundError:
+    username = input("WHat is your name? ")
+    with open(filenam, 'w') as f:
+        json.dump(username, f)
+        print(f"We'll remember you when you come back, {username}!")
+else:
+    print(f"Welcome back, {username}!")

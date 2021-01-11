@@ -270,3 +270,45 @@ except FileNotFoundError:
         print(f"We'll remember you when you come back, {username}!")
 else:
     print(f"Welcome back, {username}!")
+#Refactoring
+'''
+Often you'll notice something in your code that can be improved by breaking it up
+into a bunch of functions that have specific jobs to make it more clean and efficient. 
+This is called refactoring. Let's refactor the code above.
+
+It looks like this can be broken up into 3 seperate functions:
+    1. retrieves a stored username if it exists
+    2. if user name doesn't exist, we will prompt the user for one
+    3. greet the user
+'''
+import json
+
+def get_stored_username():
+    """Get stored user name if available"""
+    filename = 'username.json'
+    try:
+        with open(filename) as f:
+            username = json.load(f)
+    except FileNotFoundError:
+        return None
+    else:
+        return username
+
+def get_new_username():
+    """Prompt for a new username."""
+    username = input("What is your name? ")
+    filename = 'username.json'
+    with open(filename, 'w') as f:
+        json.dump(username, f)
+    return username        
+    
+def greet_user():
+    """Greet the user by name."""
+    username = get_stored_username()
+    if username:
+        print(f"Welcome back, {username}!")
+    else:
+        username = get_new_username() 
+        print(f"We'll remember you next time, {username}!")
+        
+greet_user()

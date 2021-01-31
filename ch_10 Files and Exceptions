@@ -22,7 +22,7 @@ with open(file_name) as file_object:
     for line in file_object:
         print(line)   #or print(line.rstrip()) to remove the white space at the end
 
-#Making a List of Lines from a File:
+#Making a List of Lines from a File:##
 '''
 in short, when you use WITH, the file object returned by OPEN() is only available
 inside the WITH block that contains it. So to retain access to the contents outside

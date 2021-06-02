@@ -1,4 +1,4 @@
-##Reading a File: file_reader.py ######
+##Reading a File: file_reader.py ####
 with open('sample_text.txt') as file_object:
     contents = file.object.read()
 print(contents)

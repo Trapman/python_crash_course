@@ -11,7 +11,7 @@ for player in players:
   if player == 'embiid':
     print(player.upper())
   else:
-    print(player.title()
+    print(player.title())
     
 # conditional tests: every if statement has a conditional test that can be evaluated as True/False
 # checking for equality
@@ -27,7 +27,7 @@ player.lower() == 'foles' #true
 # checking for inequality
 ebay_item = 'bahamut lagoon'
 
-if ebay_item != 'live a live'
+if ebay_item != 'live a live':
     print('Do not bid on this item!')
     
 # checking multiple conditions
@@ -37,7 +37,7 @@ age_1 = 18
 age_0 >=21 and age_1 >= 21  #False
 age_0 >=21 or age_1 >= 21   #True
 
-# checking whether a value is in a list:
+# checking whether a value is in a list (use IN)
 snes_game_queue = ['seiken densetsu 3', 'bahamut lagoon', 'treasure of the rudras']
 'bahamut lagoon' in snes_game_queue #True
 'terranigma' in snes_game_queue #False
@@ -63,7 +63,7 @@ if age > 18:
 # if-else statements
 age = 24
 if age > 18:
-    print('You are old enough to vote.')
+    print(f'You are {age} years old and you are old enough to vote.')
     print('Have you registered to vote?')
 else:
     print('Sorry, you have to be at least 18 years old to vote!')

@@ -9,7 +9,7 @@ class AlienInvasion:
         """This initializes the game and creates game resources"""
         pygame.init()
         
-        self.screen = pygame.display.set_mode((1200, 800))
+        self.screen = pygame.display.set_mode((1200, 800)) #to manage resolution
         pygame.disply.set_caption("Alien Invasion")
         
         # set the background color
